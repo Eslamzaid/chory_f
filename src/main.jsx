@@ -4,7 +4,7 @@ import { browserHistory, Router, Route, IndexRoute } from 'react-router'
 
 import LoginA from "./components/notLoged/LoginA.jsx";
 import Signup from "./components/notLoged/Signup.jsx";
-import Chatting from "./components/loged/chatting.jsx";
+import Chatting from "./components/loged/Chatting.jsx";
 
 render(
   <Router history={browserHistory}>
