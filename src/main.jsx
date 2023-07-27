@@ -8,22 +8,24 @@ import Chatting from "./components/loged/Chatting.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route
-      path="/"
-      element={<App />}
-    />
-    <Route
-      path="/login"
-      element={<LoginA />}
-    />
-    <Route
-      path="/signup"
-      element={<Signup />}
-    />
-    <Route
-      path="/home"
-      element={<Chatting />}
-    />
+    <>
+      <Route
+        path="/"
+        element={<App />}
+      />
+      <Route
+        path="/login"
+        element={<LoginA />}
+      />
+      <Route
+        path="/signup"
+        element={<Signup />}
+      />
+      <Route
+        path="/home"
+        element={<Chatting />}
+      />
+    </>
   )
 );
 
