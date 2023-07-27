@@ -6,6 +6,7 @@ import { checkIsAuth } from "../../utls/func";
 
 function Signup() {
   const navigate = useNavigate("");
+  const navigate2 = useNavigate()
 
   const [name, setName] = useState("");
   const [username, setUserName] = useState("");
@@ -91,6 +92,10 @@ function Signup() {
     }
   };
 
+  const handleClick = () => {
+    navigate2("/login")
+  }
+
   return (
     <section className="m-8 font-snsn">
       <nav>
@@ -99,12 +104,12 @@ function Signup() {
       <section className="flex flex-col items-center justify-center mt-10">
         <div className="w-7/12">
           {" "}
-          <a href="/login" className=" flex items-center">
+          <p onClick={() => handleClick()} className=" flex items-center">
             <span className="w-5">
               <img src={lessThan} alt="go to login in" />
             </span>
             Back to login
-          </a>
+          </p>
         </div>
         <div className="w-full text-center">
           <h1 className="text-4xl font-semibold mt-10">Sign up!</h1>
