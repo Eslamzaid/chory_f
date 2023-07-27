@@ -4,7 +4,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./index.css";
 import LoginA from "./components/notLoged/LoginA.jsx";
 import Signup from "./components/notLoged/Signup.jsx";
-import Chatting from "./components/loged/Chatting.jsx";
+import Chatting from "./components/loged/chatting.jsx";
 
 const router = createBrowserRouter([
   {
@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/login",
+    path: "login",
     element: <LoginA />,
   },
   {
@@ -20,11 +20,13 @@ const router = createBrowserRouter([
     element: <Signup />,
   },
   {
-    path: "/home",
+    path: "home",
     element: <Chatting />,
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById("root")).render(  
-  <RouterProvider router={router} />
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
 );
