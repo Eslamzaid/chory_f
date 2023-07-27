@@ -1,6 +1,6 @@
 const checkIsAuth = async () => {
   try {
-    const res = await fetch("https://chory-b.onrender.com", {
+    const res = await fetch("https://chory-b.onrender.com/", {
       method: "GET",
       credentials: "include",
     });
