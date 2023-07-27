@@ -11,26 +11,21 @@ const router = createBrowserRouter(
     <Route
       path="/"
       element={<App />}
-    >
-      <Route errorElement={<ErrorPage />}>
-        <Route index element={<App />} />
-        <Route
-          path="login"
-          element={<LoginA />}
-        />
-        <Route
-          path="signup"
-          action={Signup}
-        />
-        <Route
-          path="home"
-          action={Chatting}
-        />
-      </Route>
-    </Route>
+    />
+    <Route
+      path="login"
+      element={<LoginA />}
+    />
+    <Route
+      path="signup"
+      action={Signup}
+    />
+    <Route
+      path="home"
+      action={Chatting}
+    />
   )
 );
-
 
 ReactDOM.createRoot(document.getElementById("root")).render(  
   <RouterProvider router={router} />
