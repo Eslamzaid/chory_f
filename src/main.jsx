@@ -1,33 +1,19 @@
-import ReactDOM from "react-dom/client";
-import React from "react";
-import App from "./App.jsx";
-import { RouterProvider, createHashRouter } from "react-router-dom";
-import "./index.css";
+import React from 'react'
+import { render } from 'react-dom'
+import { browserHistory, Router, Route, IndexRoute } from 'react-router'
+
 import LoginA from "./components/notLoged/LoginA.jsx";
 import Signup from "./components/notLoged/Signup.jsx";
-import Chatting from "./components/loged/Chatting.jsx";
+import Chatting from "./components/loged/chatting.jsx";
 
-const router = createHashRouter([
-  {
-    path: "/",
-    element: <App />,
-  },
-  {
-    path: "/login",
-    element: <LoginA />,
-  },
-  {
-    path: "/signup",
-    element: <Signup />,
-  },
-  {
-    path: "/home",
-    element: <Chatting />,
-  },
-]);
-
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
-);
+render(
+  <Router history={browserHistory}>
+    <Route path='/' component={App}>
+      <IndexRoute component={Home} />
+      <Route path='login' component={LoginA} />
+      <Route path='signup' component={Signup} />
+      <Route path="/home" component={Chatting}/>
+    </Route>
+  </Router>,
+  document.getElementById('app')
+)
