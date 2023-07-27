@@ -20,7 +20,7 @@ function Signup() {
     const checking = async () => {
       const check = await checkIsAuth();
       if (check.success) {
-        navigate("/home");
+        navigate("home");
       }
     };
 
@@ -70,13 +70,11 @@ function Signup() {
 
     setMes("");
     setState(true);
-    // All checks pass, you can proceed with the registration logic here.
-    // For example, you can submit the form or call an API to save the data.
   };
 
   const submitForm = async (e) => {
     e.preventDefault();
-    const response = await fetch("https://chory-b.onrender.com/api/signUp", {
+    const response = await fetch("http://localhost:4000/api/signUp", {
       method: "POST",
       credentials: "include",
       headers: {
@@ -89,7 +87,7 @@ function Signup() {
       setMes(data.message);
     } else if (data.success === true) {
       setMes(data.message);
-      navigate("/home");
+      navigate("home");
     }
   };
 
