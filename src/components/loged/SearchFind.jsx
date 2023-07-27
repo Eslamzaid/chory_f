@@ -24,7 +24,7 @@ function SearchFind({
   const searchUser = async () => {
     setIsLoading(true);
 
-    const response = await fetch("http://localhost:4000/home/search", {
+    const response = await fetch("https://chory-b.onrender.com/home/search", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -70,7 +70,7 @@ function SearchFind({
   };
 
   const getChats = () => {
-    fetch("http://localhost:4000/home/chats", {
+    fetch("https://chory-b.onrender.com/home/chats", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -96,7 +96,7 @@ function SearchFind({
         let tmp = usEmail;
         let h = [];
         h.push(tmp);
-        fetch("http://localhost:4000/home/his", {
+        fetch("https://chory-b.onrender.com/home/his", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -119,7 +119,7 @@ function SearchFind({
         let tmp = usEmail;
         let h = [];
         h.push(tmp);
-        fetch("http://localhost:4000/home/his", {
+        fetch("https://chory-b.onrender.com/home/his", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -180,7 +180,7 @@ function SearchFind({
 
   const requestUser = async () => {
     setIsLoading(true);
-    const response = await fetch("http://localhost:4000/home/addUser", {
+    const response = await fetch("https://chory-b.onrender.com/home/addUser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -203,7 +203,7 @@ function SearchFind({
   };
 
   const rejectRequest = async (email) => {
-    fetch("http://localhost:4000/home/rejReq/" + email, {
+    fetch("https://chory-b.onrender.com/home/rejReq/" + email, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -220,7 +220,7 @@ function SearchFind({
   };
 
   const acceptUser = async (email) => {
-    const response = await fetch("http://localhost:4000/home/acceptUser", {
+    const response = await fetch("https://chory-b.onrender.com/home/acceptUser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
