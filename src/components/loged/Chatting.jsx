@@ -15,7 +15,7 @@ const Chatting = () => {
     const checking = async () => {
       const check = await checkIsAuth();
       if (check.success == false) {
-        navigate("/");
+        navigate("/login");
       } else {
         const { id } = check;
         setEmailId(id);
