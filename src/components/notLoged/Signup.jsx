@@ -20,7 +20,7 @@ function Signup() {
     const checking = async () => {
       const check = await checkIsAuth();
       if (check.success) {
-        navigate("home");
+        navigate("/home");
       }
     };
 
@@ -87,7 +87,7 @@ function Signup() {
       setMes(data.message);
     } else if (data.success === true) {
       setMes(data.message);
-      navigate("home");
+      navigate("/home");
     }
   };
 
