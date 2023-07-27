@@ -19,9 +19,9 @@ function App() {
 
   useEffect(() => {
     if (auth === true) {
-      navigate("/home");
+      navigate("home");
     } else if (auth === false) {
-      navigate("/login");
+      navigate("login");
     }
   }, [auth, navigate]);
 
