@@ -9,12 +9,13 @@ function LoginA() {
   const [password, setPassword] = useState("");
   const [mes, setMessage] = useState("");
   const navigate = useNavigate("");
+  const navigate2 = useNavigate()
 
   useEffect(() => {
     const checking = async () => {
       const check = await checkIsAuth();
       if (check.success) {
-        navigate("home");
+        navigate("/home");
       }
     };
 
@@ -32,13 +33,17 @@ function LoginA() {
     });
     const result = await response.json();
     if ((await result.success) == true) {
-      navigate("home");
+      navigate("/home");
     } else {
       setEmail("");
       setPassword("");
       setMessage(await result.message);
     }
   };
+
+  const handleCli = () => {
+    navigate2("/signup")
+  }
 
   let dis = false;
   if (
@@ -56,10 +61,10 @@ function LoginA() {
       <div className="col-span-2 m-9 ">
         <nav className="flex justify-between font-medium">
           <img src={logo} alt="chory logo " />
-          <a href="/signup" className="hover:underline decoration-stone-700">
+          <p onClick={() => handleCli()} className="hover:underline decoration-stone-700">
             Don&apos;t have an account?{" "}
             <span className="text-[#20DC49] font-semibold">Sign up!</span>
-          </a>
+          </p>
         </nav>
         <article>
           <section className=" flex justify-center mt-24">
