@@ -4,7 +4,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./index.css";
 import LoginA from "./components/notLoged/LoginA.jsx";
 import Signup from "./components/notLoged/Signup.jsx";
-import Chatting from "./components/loged/chatting.jsx";
+import Chatting from "./components/loged/Chatting.jsx";
 
 const router = createBrowserRouter([
   {
