@@ -22,7 +22,7 @@ function LoginA() {
   });
   const signIn = async (e) => {
     e.preventDefault();
-    const response = await fetch("https://chory-b.onrender.com/login", {
+    const response = await fetch("https://chory-b.onrender.com/api/login", {
       method: "POST",
       credentials: "include",
       headers: {
