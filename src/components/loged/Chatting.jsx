@@ -70,7 +70,7 @@ const Chatting = () => {
 
   const delChat = async (email) => {
     try {
-      await fetch("https://chory-b.onrender.com/delChat", {
+      await fetch("https://chory-b.onrender.com/home/delChat", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
