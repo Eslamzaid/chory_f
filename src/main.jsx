@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { browserHistory, Router, Route, IndexRoute } from 'react-router'
+import { browserHistory, Router, Route, IndexRoute } from 'react-router-dom'
 
 import LoginA from "./components/notLoged/LoginA.jsx";
 import Signup from "./components/notLoged/Signup.jsx";
