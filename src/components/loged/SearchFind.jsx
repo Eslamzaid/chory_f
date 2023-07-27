@@ -50,7 +50,7 @@ function SearchFind({
   };
 
   const getList = () => {
-    fetch("http://localhost:4000/home/", {
+    fetch("https://chory-b.onrender.com/home/", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
