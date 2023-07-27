@@ -33,7 +33,7 @@ const Chatting = () => {
   const [show, setShow] = useState([]);
   const [fin, setFin] = useState(false);
 
-  const socket = io.connect("http://localhost:4000");
+  const socket = io.connect("https://chory-b.onrender.com/");
 
   const joinRoom = (room, username) => {
     if (username !== "" && room !== "") {
@@ -70,7 +70,7 @@ const Chatting = () => {
 
   const delChat = async (email) => {
     try {
-      await fetch("http://localhost:4000/home/delChat", {
+      await fetch("https://chory-b.onrender.com/delChat", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
