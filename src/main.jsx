@@ -13,16 +13,16 @@ const router = createBrowserRouter(
       element={<App />}
     />
     <Route
-      path="login"
+      path="/login"
       element={<LoginA />}
     />
     <Route
-      path="signup"
-      action={Signup}
+      path="/signup"
+      element={<Signup />}
     />
     <Route
-      path="home"
-      action={Chatting}
+      path="/home"
+      element={<Chatting />}
     />
   )
 );
