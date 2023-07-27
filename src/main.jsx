@@ -1,10 +1,11 @@
 import ReactDOM from "react-dom/client";
+import React from "react";
 import App from "./App.jsx";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./index.css";
 import LoginA from "./components/notLoged/LoginA.jsx";
 import Signup from "./components/notLoged/Signup.jsx";
-import Chatting from "./components/loged/Chatting.jsx";
+import Chatting from "./components/loged/chatting.jsx";
 
 const router = createBrowserRouter([
   {
