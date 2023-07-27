@@ -21,7 +21,7 @@ function App() {
     if (auth === true) {
       navigate("home");
     } else if (auth === false) {
-      navigate("login");
+      navigate("signup");
     }
   }, [auth, navigate]);
 
