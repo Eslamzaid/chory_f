@@ -61,7 +61,7 @@ function LoginA() {
       <div className="col-span-2 m-9 ">
         <nav className="flex justify-between font-medium">
           <img src={logo} alt="chory logo " />
-          <p onClick={() => handleCli()} className="hover:underline decoration-stone-700">
+          <p onClick={() => handleCli()} className="hover:underline decoration-stone-700 cursor-pointer">
             Don&apos;t have an account?{" "}
             <span className="text-[#20DC49] font-semibold">Sign up!</span>
           </p>
