@@ -259,10 +259,12 @@ function Signup() {
             </div>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <button
-              className={`w-10/12 mt-10 rounded-lg border-2 border-stone-600 py-3 hover:bg-[#eeeff0] ${"cursor-pointer"}`}
+           <button
+              className={`w-10/12 mt-10 rounded-lg border-2 border-stone-600 py-3 hover:bg-[#eeeff0] cursor-pointer ${
+                state ? "animate-pulse" : ""
+              }`}
               type={state ? "submit" : "button"}
-              onClick={checkTrue}
+              onClick={() => checkTrue()}
             >
               Sing up
             </button>
